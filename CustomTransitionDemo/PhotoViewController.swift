@@ -16,11 +16,11 @@ class PhotoViewController: UIViewController, UIGestureRecognizerDelegate {
         super.viewDidLoad()
         
         if navigationController != nil {
-            dismissButton.hidden = true
+            dismissButton.isHidden = true
         }
     }
     
-    @IBAction func tappedDismissButton(sender: AnyObject) {
-        dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func tappedDismissButton(_ sender: AnyObject) {
+        dismiss(animated: true, completion: nil)
     }
 }
